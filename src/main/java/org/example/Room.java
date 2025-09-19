@@ -36,6 +36,12 @@ public boolean isRoomFull(){
     return clients.size() >= maxCapacity;
 }
 
+public int howManyInroom(){
+    return clients.size();
+}
+public int getMaxCapacity() {
+    return maxCapacity;
+}
 public List<String> clientNamesInRoom(){
     List<String> names = new ArrayList<>();
     for (ClientHandler client : clients) {

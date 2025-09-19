@@ -6,6 +6,15 @@ import java.util.List;
 
 public class Server {
     private List<ClientHandler> clients = new ArrayList<>();
+    private RoomManager roomManager;
+
+    public Server() {
+        this.roomManager = new RoomManager();
+    }
+
+    public RoomManager getRoomManager() {
+        return roomManager;
+    }
 
     public void addClient(ClientHandler client) {
         clients.add(client);
